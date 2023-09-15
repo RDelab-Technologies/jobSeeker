@@ -1,0 +1,31 @@
+.firstbox{
+    background-color: black;
+}
+.comicons{
+    background-color: rgb(244, 235, 218);
+    display: flex;
+    justify-content: space-between;
+    padding: 34px;
+    margin-bottom: 53px; 
+}
+
+
+@media (max-width:423px) {
+     .comicons{
+        display: flex;
+        flex-direction: column ;
+        justify-content: center;
+        text-align: center; 
+         align-items: center;
+     }
+}
+.iconsjob img{
+    transition: transform .4s ease-in-out;
+}
+.iconsjob img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.iconsjob:hover{
+    background-color: #67ed50;
+}

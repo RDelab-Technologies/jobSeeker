@@ -1,0 +1,13 @@
+.comicons{
+    background-color: rgb(244, 235, 218);
+    display: flex;
+    justify-content: space-between;
+    padding: 34px;
+    margin-bottom: 53px;
+}
+.card{
+    width: 400px;
+}
+.card img{
+    height: 304px;
+}

@@ -1,0 +1,57 @@
+.contactfull{
+    background-color: red;
+}
+.container {
+    margin-bottom: 43px; 
+
+}
+.contact{
+    background-image: url("../../public/images/background.jpeg");
+    background-position: center;
+    font-family: 'Roboto', sans-serif;;
+    font-size: 23px;
+    font-weight: 400;
+    height: 90vh;
+    margin-top: 23px;
+    margin-bottom: 23px;
+   
+    
+}
+.contact h1{
+    margin-top: 23px;
+}
+.contact-text{
+    margin-top:23px
+}
+.button{
+    margin-bottom: 23px !important;
+}
+.mb-3 input, textarea{
+    width: 78vh !important;
+}
+.my-3{
+    margin-top: 23px !important;
+}
+
+.contbox{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    justify-content: space-between;
+
+}
+.contimg img{
+    width: 70wh;
+    height: 80vh;
+    margin-right: 134px;
+  
+}
+.contform{
+    width: 50wh;
+    height: 50vh;
+}
+.row-form{
+    width: 70vh;
+    margin-right: 203px;
+    margin-top: 45px;
+}
