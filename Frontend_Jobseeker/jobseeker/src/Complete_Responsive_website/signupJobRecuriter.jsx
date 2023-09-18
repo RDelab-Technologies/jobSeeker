@@ -12,13 +12,13 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { NavLink } from 'react-router-dom';
-​
-​
-​
-​
+
+
+
+
 const defaultTheme = createTheme();
-​
-​
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -31,9 +31,9 @@ const defaultTheme = createTheme();
   const signupJobRecuriter = () => {
   return (
     <>
-​
+
 <div className='backgroundimg1'>
-​
+
        <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
