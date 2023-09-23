@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-const web = 'https://thumbs.dreamstime.com/z/grow-your-business-words-office-table-computer-coffee-notepad-smartphone-digital-tablet-66818060.jpg'
+//const web = 'https://thumbs.dreamstime.com/z/grow-your-business-words-office-table-computer-coffee-notepad-smartphone-digital-tablet-66818060.jpg'
 
 
 
