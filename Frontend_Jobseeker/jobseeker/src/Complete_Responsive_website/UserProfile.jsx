@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react"
 import {
   Box,
   Button,
@@ -10,6 +10,16 @@ import {
   TextField,
   Unstable_Grid2 as Grid
 } from '@mui/material';
+
+const workexpriance =[
+  {value: 'experiance',
+  label: 'Experiance'},
+  {value: 'fresher',
+  label: 'Fresher'}
+]
+
+
+
 
 const states = [
   {
@@ -27,19 +37,23 @@ const states = [
   {
     value: 'los-angeles',
     label: 'Los Angeles'
+  },
+  {
+    value: 'maharashtra',
+    label: 'Maharashtra'
   }
 ];
 
-export  const AccountProfileDetails = () => {
-  const [values, setValues] = useState({
-    firstName: 'Anika',
-    lastName: 'Visser',
-    email: 'demo@devias.io',
-    phone: '',
-    state: 'los-angeles',
-    country: 'USA'
-  });
 
+function UserProfile() {
+  const [values, setValues] = useState({
+    firstName: 'Akshay',
+    lastName: 'Shirsat',
+    email: 'akshay.shirsat28@gmail.com',
+    phone: '+91 xxxxxxx604',
+    state: 'Maharashtra',
+    country: 'India'
+  });
   const handleChange = useCallback(
     (event) => {
       setValues((prevState) => ({
@@ -56,9 +70,11 @@ export  const AccountProfileDetails = () => {
     },
     []
   );
-
+  
   return (
-    <form
+    <div>
+      
+      <form
       autoComplete="off"
       noValidate
       onSubmit={handleSubmit}
@@ -123,8 +139,8 @@ export  const AccountProfileDetails = () => {
                   label="Phone Number"
                   name="phone"
                   onChange={handleChange}
-                  type="number"
-                  value={values.phone}
+                  type="email"
+                  value={values.phone} 
                 />
               </Grid>
               <Grid
@@ -163,11 +179,38 @@ export  const AccountProfileDetails = () => {
                     </option>
                   ))}
                 </TextField>
+                
+              </Grid>
+              <Grid
+                xs={12}
+                md={6}
+              >
+                <TextField
+                  fullWidth
+                  label="Work Expriance"
+                  name="state"
+                  onChange={handleChange}
+                  required
+                  select
+                  SelectProps={{ native: true }}
+                  value={values.workexpriance}
+                >
+                  {workexpriance.map((option) => (
+                    <option
+                      key={option.value}
+                      value={option.value}
+                    >
+                      {option.label}
+                    </option>
+                  ))}
+                </TextField>
+                
               </Grid>
             </Grid>
           </Box>
         </CardContent>
         <Divider />
+        
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button variant="contained">
             Save details
@@ -175,5 +218,8 @@ export  const AccountProfileDetails = () => {
         </CardActions>
       </Card>
     </form>
-  );
-};
+    </div>
+  )
+}
+
+export default UserProfile

@@ -12,7 +12,8 @@ import Login from './loginpage';
 import SignUp from './singup';
 import Companies from './companies';
 import Company from './Company';
-import JobSeekerProfile from './jobseekerProfile';
+import UserProfile from './UserProfile';
+import UserProfileDetails from './UserProfileDetails';
 
 
 
@@ -29,7 +30,8 @@ const App = () =>{
               <Route path='/Companies' element={<Companies/>} />
                <Route path='/login' element={<Login/>} /> 
               <Route path='/signup' element={<SignUp/>} /> 
-               <Route path='/jobseekerprofile' element={<JobSeekerProfile/>}/>
+              <Route path='/Userprofile' element={<UserProfile/>}/>
+               <Route path='/UserProfileDetails' element={<UserProfileDetails/>}/>
               
               <Route path='*' element={<None/>} /> 
           </Routes>
