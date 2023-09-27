@@ -12,7 +12,7 @@ import Login from './loginpage';
 import SignUp from './singup';
 import Companies from './companies';
 import Company from './Company';
-
+import JobSeekerProfile from './jobseekerProfile';
 
 
 
@@ -26,9 +26,11 @@ const App = () =>{
              <Route path='/Company' element={<Company />} />
               <Route path='/contact' element={<Contact/>} /> 
               <Route path='/Companies' element={<Companies/>} /> 
+              <Route path='/Companies' element={<Companies/>} />
                <Route path='/login' element={<Login/>} /> 
               <Route path='/signup' element={<SignUp/>} /> 
-
+               <Route path='/jobseekerprofile' element={<JobSeekerProfile/>}/>
+              
               <Route path='*' element={<None/>} /> 
           </Routes>
           <Footer/>
