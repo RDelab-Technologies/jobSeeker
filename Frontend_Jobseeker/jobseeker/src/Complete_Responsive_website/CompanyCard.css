@@ -1,0 +1,110 @@
+/* .cardds img {
+    box-shadow:  0px 15px 50px rgba(248, 240, 240, 0.1);
+    border-radius: base;
+    transition: 0.6s;
+        height: 70px;
+        width: 70px;
+        margin: 25px;
+}
+ 
+.card-Types{
+  opacity: 1.0;
+  width:"50%";
+  float:"left"
+}
+.card-title{
+    opacity: 1.0;
+    width:"50%";
+    float:"right"
+}
+.container-fluid mb-5{
+    border-radius: 400%;
+    background-color: rgb(227, 28, 55);
+}
+
+.cardds{
+    display: inline-flex;
+   
+}
+.card-body{
+   width: 18rem;
+}
+.card-post{
+    font-size: 5px;
+} */
+
+/* CompanyCards.css */
+
+.cardds {
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    height: 420px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -85px;
+    margin-left: 110px;
+}
+  
+.card-Post {
+  font-size: 18px;
+  color: #555;
+  margin-top: 35px;
+}
+  
+  .card-date {
+    font-size: 14px;
+    color: #888;
+    margin-top: -30px;
+}
+  
+  .card-Types {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .card-Salary {
+    font-size: 20px;
+    color: #ff5733;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .card-Location {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+ .cardds img {
+    box-shadow:  0px 15px 50px rgba(248, 240, 240, 0.1);
+    border-radius: base;
+    transition: 0.6s;
+        height: 70px;
+        width: 70px;
+        margin: 25px;
+        margin-left: 10px;
+}
+   

@@ -1,6 +1,7 @@
 import React from 'react';
 import CompanyCards from './CompanyCards';
 import CompanyData from './CompanyData';
+import './CompanyCard.css'
 const Company = () => {
      return (
           <>
@@ -14,7 +15,7 @@ const Company = () => {
                     {
                          CompanyData.map((val,ind)=>{
                               return (
-                                   <CompanyCards key={ind} imgsrc={val.imgsrc} title={val.title}/>
+                                   <CompanyCards key={ind} imgsrc={val.imgsrc}  title={val.title} Post={val.Post} Types={val.Types} Salary={val.Salary} Location={val.Location} date={val.date} />
                               )
                          })
                     }

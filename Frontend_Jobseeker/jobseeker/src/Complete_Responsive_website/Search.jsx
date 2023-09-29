@@ -8,11 +8,11 @@ const Searchbar = () => {
                     <h4>5 lakh+ jobs for you to explore</h4>
                     <div class="boxin input-group mb-0 " >
                         <img src="https://static.naukimg.com/s/7/103/i/search.57b43584.svg" alt="..." />
-                        <input type="search" class="form-control" placeholder="Find Job/Intership" aria-label="Username" />
+                        <input  id='searchid' type="search" class="form-control" placeholder="Find Job/Intership" aria-label="Username" />
 
                         <img src="images/location.png" alt="..." />
                         <input type="text" class="form-control" placeholder="Location" aria-label="Server" />
-                        <button className='butt' type="button" class="btn btn-primary">Search</button>
+                        <button  className='butt' type="button" class="btn btn-primary">Search</button>
                     </div>
                 </div>
             </div>          
