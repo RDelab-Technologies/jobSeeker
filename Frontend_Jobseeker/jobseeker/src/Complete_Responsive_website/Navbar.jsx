@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.css'
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 
 const Navbar = () => {
      return (
@@ -25,7 +25,7 @@ const Navbar = () => {
                                                   <li className="nav-item " style={{ marginRight: 5 }}>
                                                        <NavLink activeClassName="menu_active" className="nav-link" to="/Jobs">jobs</NavLink>
                                                   </li>
-                                                  <li className="nav-item" style={{ marginRight: 5 }}>
+                                                  {/* <li className="nav-item" style={{ marginRight: 5 }}>
                                                        <NavLink activeClassName="menu_active" className="nav-link" to="/service">Services</NavLink>
                                                   </li>
                                                   <li className="nav-item " style={{ marginRight: 5 }}>
@@ -33,6 +33,10 @@ const Navbar = () => {
                                                   </li>
                                                   <li className="nav-item " style={{ marginRight: 5 }}>
                                                        <NavLink activeClassName="menu_active" className="nav-link" to="/about">Contest</NavLink>
+                                                  </li> */}
+                                           
+                                                  <li className="nav-item" style={{ marginRight: 5 }}>
+                                                       <NavLink activeClassName="menu_active" className="nav-link" to="/UserProfileDetails">Jobseeker Profile</NavLink>
                                                   </li>
                                                   <li className="nav-item" style={{ marginRight: 5 }}>
                                                        <NavLink activeClassName="menu_active" className="nav-link" to="/contact">Contact</NavLink>
