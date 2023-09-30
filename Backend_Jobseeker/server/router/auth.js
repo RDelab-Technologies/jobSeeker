@@ -3,7 +3,7 @@ const router = express.Router();
 
 require('../db/connection');
 const Jobseeker = require('../model/Jobseeker');
-// const Recuiter = require('../model/recruiter');
+const Recuiter = require('../model/recruiter');
 
 const middleware = (req, res, next) => {
     console.log("Good morning Sir");
@@ -20,7 +20,7 @@ router.get('/about', middleware, (req, res) => {
 
 // Jobseeker sign up page
 
-router.post('/Jobseekersignup', async (req, res) => {
+router.post('/jobseekersignup', async (req, res) => {
 
     const { firstname, lastname, email, password } = req.body;
 
@@ -50,31 +50,33 @@ router.post('/Jobseekersignup', async (req, res) => {
 
 // Recuiter signup page
 
-// router.post('/recruitersignup',(req,res)=>{
+router.post('/recruitersignup', async (req, res) => {
 
-//     const {firstname, lastname, email, password} = req.body;
+    const {company_title, firstname, lastname,location, email, password } = req.body;
 
-//     if(!firstname || !lastname || !email || !password){
-//        return  res.status(410).json({error :"Plese filled  colums"});
-//     }
+    if (!company_title || !firstname || !lastname , !location || !email || !password) {
+        return res.status(410).json({ error: "Plese filled  colums" });
+    }
 
-//     Recuiter.findOne({email:email}).then((userExits)=>{
-//        if(userExits){
-//            return  res.status(411).json({error :"User Already Exits"});
-//        }
+    try {
+        const userExits = await Recuiter.findOne({ email: email });
+        if (userExits) {
+            return res.status(411).json({ error: "User Already Exits" });
+        }
 
-//        const RecuiterData = new Jobseeker({firstname,lastname,email,password});
+        const RecuiterData = new Recuiter({ company_title,firstname, lastname,location, email, password });
 
-//        RecuiterData.save().then(()=>{
-//             res.status(201).json({message:"Data Store successfuly"});
-//        }).catch((err)=>{
-//             res.staus(500).json({message:"Failed to store data in database"});
-//        });
+        
+        await RecuiterData.save();
 
-//     }).catch((err)=>{
-//          console.log(err);
-//     })
-// })
+        res.status(201).json({ message: "Data Store successfuly" });
+
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
+
 
 
 module.exports = router;
