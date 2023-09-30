@@ -25,23 +25,8 @@ router.get('/about', middleware, (req, res) => {
 
 router.post('/Jobseekersignup', async (req, res) => {
     try{
-        const { firstname, lastname, email, password } = req.body;
-    
-        if(Object.keys(req.body).length==0) return res.status(400).send({status:false,msg:"please enter a data in request body"})
-        
-        if(!firstname) return res.status(400).send({status:false,msg:"firstname is missing"})
-        
-        if(typeof firstname!=="string") return res.status(400).send({status:false,message:"Please enter  firstname as a String"})
-    
-        if (! /^\w[a-zA-Z.\s]*$/.test(firstname)) return res.status(400).send({ status: false, msg: "The  firstname may contain only letters" });
-        
-        if(!lastname) return res.status(400).send({status:false,msg:"lastname is missing"})
-        
-        if(typeof lastname!=="string") return res.status(400).send({status:false,message:"Please enter  lastname as a String"})
-    
-        if (!email) return res.status(400).send({ status: false, msg: "email is missing" })
-
-        if (typeof email !== "string") return res.status(400).send({ status: false, msg: " Please enter  email as a String" });
+        const { firstname, lastname, email, password } = req.body;        
+        if(!firstname ||!lastname||!email || !password) return res.status(400).send({status:false,msg:"enter all field"})
 
         if (!/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(email)) return res.status(400).send({ status: false, msg: "Entered email is invalid" });
 
@@ -176,6 +161,7 @@ router.post('/sendotp',async(req,res)=>{
         return res.status(200).json({message:'OTP sent sucessfully'})
       })
 })
+
 
 
 
