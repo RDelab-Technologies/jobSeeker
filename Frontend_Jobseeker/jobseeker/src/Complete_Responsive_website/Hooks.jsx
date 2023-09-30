@@ -12,8 +12,8 @@ import Login from './loginpage';
 import SignUp from './singup';
 import Companies from './companies';
 import Company from './Company';
-import UserProfile from './UserProfile';
-import UserProfileDetails from './UserProfileDetails';
+import UserProfile from '../section/jobseekrProfile/UserProfile';
+import UserProfileDetails from '../section/jobseekrProfile/UserProfileDetails';
 
 
 
