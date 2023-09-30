@@ -17,6 +17,11 @@ const jobseekerschema=new mongoose.Schema({
     type:String,
     required:true
   },
+  otp: {
+    type: String,
+    required: true,
+    default:' '
+}
 })
 const Jobseeker= mongoose.model('JobseekerUser',jobseekerschema);
 
