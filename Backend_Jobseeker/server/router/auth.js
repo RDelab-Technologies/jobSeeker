@@ -66,8 +66,9 @@ router.post('/recruitersignup', async (req, res) => {
 
         const RecuiterData = new Recuiter({ company_title,firstname, lastname,location, email, password });
 
-        
+
         await RecuiterData.save();
+
 
         res.status(201).json({ message: "Data Store successfuly" });
 
