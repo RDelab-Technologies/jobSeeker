@@ -3,46 +3,32 @@ const Schema= mongoose.Schema;
 
 
 const recruiterschema=new Schema({
-  Select_Your_Sector:{
+  
+  company_title:{
     type:String,
     required:true
   },
-  Add_Your_Logo:{
-    type:String,
-    required:true
-  },
-  Company_Title:{
-    type:String,
-    required:true
-  },
-  Sector:{
-    type:String,
-    required:true
-  },
-  FirstName :{
+  firstname :{
     type: String,
     required:true
   },
-  LastName :{
+  lastname :{
     type:String,
     required:true
   },
-  Location:{
+  location:{
     type:String,
     required:true
   },
-  EmailAddress:{
-    type:email,
+  email:{
+    type:String,
     required:true
   },
-  Password:{
-    type:password,
+  password:{
+    type:String,
     required:true
   },
-  ConfirmPassword:{
-    type:password,
-    required:true
-  }
-
-
 })
+const Recuiter = mongoose.model('RecuiterUser',recruiterschema);
+
+module.exports =  Recuiter;

@@ -11,20 +11,28 @@ import {
   Unstable_Grid2 as Grid
 } from '@mui/material';
 
+
+
+
 const workexpriance =[
   {value: 'experiance',
   label: 'Experiance'},
   {value: 'fresher',
   label: 'Fresher'}
 ]
-
+const gender =[
+  {value: 'male',
+  label: 'Male'},
+  {value: 'female',
+  label: 'Female'}
+]
 
 
 
 const states = [
   {
-    value: 'alabama',
-    label: 'Alabama'
+    value: 'Maharashtra',
+    label: 'Maharashtra'
   },
   {
     value: 'new-york',
@@ -48,7 +56,7 @@ const states = [
 function UserProfile() {
   const [values, setValues] = useState({
     firstName: 'Akshay',
-    lastName: 'Shirsat',
+    lastName: 'Shirsath',
     email: 'akshay.shirsat28@gmail.com',
     phone: '+91 xxxxxxx604',
     state: 'Maharashtra',
@@ -206,13 +214,46 @@ function UserProfile() {
                 </TextField>
                 
               </Grid>
+              <Grid
+                xs={12}
+                md={6}
+              >
+                <TextField
+                  fullWidth
+                  label="GENDER"
+                  name="gender"
+                  onChange={handleChange}
+                  required
+                  select
+                  SelectProps={{ native: true }}
+                  value={values.gender}
+                >
+                  {gender.map((option) => (
+                    <option
+                      key={option.value}
+                      value={option.value}
+                    >
+                      {option.label}
+                    </option>
+                  ))}
+                </TextField>
+             </Grid>
+             <Grid
+                xs={12}
+                md={6}
+              >
+                             <input accept="image/" type="file" id="select-image" />
+                <label htmlFor="select-image">
+  </label>
+
+             </Grid>
             </Grid>
           </Box>
         </CardContent>
         <Divider />
         
         <CardActions sx={{ justifyContent: 'flex-end' }}>
-          <Button variant="contained">
+          <Button variant="contained" >
             Save details
           </Button>
         </CardActions>

@@ -23,6 +23,6 @@ const jobseekerschema=new mongoose.Schema({
     default:' '
 }
 })
-const Jobseeker= mongoose.model('USER',jobseekerschema);
+const Jobseeker= mongoose.model('JobseekerUser',jobseekerschema);
 
 module.exports =  Jobseeker;
