@@ -163,6 +163,32 @@ router.post('/sendotp',async(req,res)=>{
 })
 
 
+router.post('/verifyotp', async (req, res) => {
+    try {
+        const { email, otp } = req.body;
+
+        // Check if both email and OTP are provided
+        if (!email || !otp) {
+            return res.status(400).json({ message: 'Email and OTP are required' });
+        }
+        let isuser = await Users.findOne({ email: email })
+        if (!isuser){
+            return res.status(404).send({ status: false, message: "Account not found for this email" })
+        }
+        
+
+        if (otp !== isuser.otp) {
+            return res.status(403).send({ status: false, message: "Invalid otp" })
+        } else {
+            return res.send({ status: true, message: "OTP verified successfully" })
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+
 
 
 
