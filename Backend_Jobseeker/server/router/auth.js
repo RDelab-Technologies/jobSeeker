@@ -25,10 +25,7 @@ router.get('/about', middleware, (req, res) => {
 
 router.post('/Jobseekersignup', async (req, res) => {
     try{
-        const { firstname, lastname, email, password } = req.body;
-    
-        if(Object.keys(req.body).length==0) return res.status(400).send({status:false,msg:"please enter a data in request body"})
-        
+        const { firstname, lastname, email, password } = req.body;        
         if(!firstname ||!lastname||!email || !password) return res.status(400).send({status:false,msg:"enter all field"})
 
         if (!/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(email)) return res.status(400).send({ status: false, msg: "Entered email is invalid" });
