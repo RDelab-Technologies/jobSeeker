@@ -11,12 +11,12 @@ import {
   Unstable_Grid2 as Grid
 } from '@mui/material';
 
-const workexpriance =[
-    {value: 'experiance',
-    label: 'Experiance'},
-    {value: 'fresher',
-    label: 'Fresher'}
-  ]
+// const workexpriance =[
+//     {value: 'experiance',
+//     label: 'Experiance'},
+//     {value: 'fresher',
+//     label: 'Fresher'}
+//   ]
   const gender =[
     {value: 'male',
     label: 'Male'},

@@ -12,7 +12,7 @@ import {
     avatar: '/assets/avatars/avatar-siegbert-gottfried.png',
     city: 'Nashik,',
     country: 'India',
-    position: 'recruiter',
+    position: 'HR Head',
     name: 'Sachin Shinde',
     company_name: 'Rdelab'
   };  
