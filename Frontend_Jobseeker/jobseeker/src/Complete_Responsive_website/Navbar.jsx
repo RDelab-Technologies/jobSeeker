@@ -30,10 +30,10 @@ const Navbar = () => {
                                                   </li>
                                                   <li className="nav-item " style={{ marginRight: 5 }}>
                                                        <NavLink activeClassName="menu_active" className="nav-link" to="/Companies">Companies</NavLink>
-                                                  </li>
-                                                  <li className="nav-item " style={{ marginRight: 5 }}>
-                                                       <NavLink activeClassName="menu_active" className="nav-link" to="/about">Contest</NavLink>
                                                   </li> */}
+                                                  <li className="nav-item " style={{ marginRight: 5 }}>
+                                                       <NavLink activeClassName="menu_active" className="nav-link" to="/Cover">Recruiter Profile</NavLink>
+                                                  </li> 
                                            
                                                   <li className="nav-item" style={{ marginRight: 5 }}>
                                                        <NavLink activeClassName="menu_active" className="nav-link" to="/UserProfileDetails">Jobseeker Profile</NavLink>

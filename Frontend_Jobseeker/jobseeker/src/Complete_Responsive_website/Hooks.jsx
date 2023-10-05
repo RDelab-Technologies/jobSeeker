@@ -14,6 +14,7 @@ import Companies from './companies';
 import Company from './Company';
 import UserProfile from '../section/jobseekrProfile/UserProfile';
 import UserProfileDetails from '../section/jobseekrProfile/UserProfileDetails';
+import Cover from '../section/recruiterProfile/Cover'
 
 
 
@@ -32,7 +33,7 @@ const App = () =>{
               <Route path='/signup' element={<SignUp/>} /> 
               <Route path='/Userprofile' element={<UserProfile/>}/>
                <Route path='/UserProfileDetails' element={<UserProfileDetails/>}/>
-              
+              <Route path='/Cover' element={<Cover/>}/>
               <Route path='*' element={<None/>} /> 
           </Routes>
           <Footer/>
