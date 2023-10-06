@@ -1,12 +1,4 @@
 import { Box, Divider,Container, Stack, Typography, Unstable_Grid2 as Grid, } from '@mui/material';
-// import UserProfile from './UserProfile';
-// import UserCart from './UserCart';
-// import { SettingsPassword } from './SettingsPassword';
-// import Socialnetwork from './Socialnetwork';
-// import { Education } from './Education';
-// import AboutMeCard from './AboutMeCard';
-// import SkillsPage from './SkillsPage';
-// import AppliedJobsPage from './AppliedJobsPage';
 import Rcard from './Rcard';
 import Socialnetwork from './Socialnetwork'
 import Form from './Form';
