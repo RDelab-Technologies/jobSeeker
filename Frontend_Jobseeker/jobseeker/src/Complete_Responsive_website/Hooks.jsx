@@ -18,6 +18,7 @@ import Cover from '../section/recruiterProfile/Cover'
 
 
 
+
 const App = () =>{
      return (
           <>
@@ -34,6 +35,7 @@ const App = () =>{
               <Route path='/Userprofile' element={<UserProfile/>}/>
                <Route path='/UserProfileDetails' element={<UserProfileDetails/>}/>
               <Route path='/Cover' element={<Cover/>}/>
+
               <Route path='*' element={<None/>} /> 
           </Routes>
           <Footer/>
